@@ -24,6 +24,7 @@ MyString::MyString(const MyString& exist_string) {
 MyString::MyString(MyString&& exist_string) {
     my_string = exist_string.get();
     len = exist_string.length();
+    exist_string.len = 0;
     exist_string.my_string = nullptr;
 }
 
@@ -137,6 +138,7 @@ MyString& MyString::operator=(MyString&& is_string) {
     my_string = is_string.get();
     len = is_string.length()+1;
     is_string.my_string = nullptr;
+    is_string.len = 0;
     return is_string;
 }
 

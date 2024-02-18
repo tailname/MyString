@@ -5,12 +5,13 @@
 class MyString {
  protected:
     char* my_string;
+    int len;
 
  private:
     int FindLen(const char* CharString) const;
     char* WriteString(char* WhereToWriteString,
                       const char* CharString, int len);
-    int len;
+
 
  public:
     explicit MyString(const char* char_is_string);

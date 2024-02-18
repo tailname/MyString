@@ -29,7 +29,8 @@ int main() {
     }  // str5 выходит из области видимости и вызывается деструктор
 
     // Тест оператора +
-    MyString str6 = str1 + str3;
+    MyString str6;
+    str6 = str1 + str3;
     assert(str6.length() == 10);
 
     // Тест оператора -
