@@ -19,7 +19,6 @@ int main() {
     MyString str3 = str1;
     assert(str3.length() == str1.length());
 
-    // Тест конструктора переноса
 
     // Тест деструктора
     {
