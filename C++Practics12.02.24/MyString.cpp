@@ -23,7 +23,7 @@ MyString::MyString(const MyString& exist_string) {
 
 MyString::MyString(MyString&& exist_string) {
     my_string = exist_string.get();
-    len = exist_string.length();
+    len = exist_string.length()+1;
     exist_string.len = 0;
     exist_string.my_string = nullptr;
 }

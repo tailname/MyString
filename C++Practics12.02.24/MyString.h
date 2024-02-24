@@ -47,9 +47,9 @@ class MyString {
     int operator()(const char* is_string) const;
 
 
-    friend std::ostream& operator<<(std::ostream& str,
+    friend std::ostream& operator<<(std::ostream& os,
                                     const MyString& is_string);
-    friend std::istream& operator>>(std::istream& str, MyString& is_string);
+    friend std::istream& operator>>(std::istream& is, MyString& is_string);
     friend MyString operator-(const MyString& where_del_string,
                               const MyString& what_del_string);
     friend MyString operator+(const MyString& is_string,

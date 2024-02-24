@@ -18,13 +18,14 @@ int main() {
     // Тест конструктора копирования
     MyString str3 = str1;
     assert(str3.length() == str1.length());
-
+    // Тест конструктора переноса
+    MyString str4(std::move(str2));
+    assert(str4.length() == 5);
+    assert(str2.length() == 0);
 
     // Тест деструктора
     {
         MyString str5("Test");
-        MyString str4;
-        str4.~MyString();
     }  // str5 выходит из области видимости и вызывается деструктор
 
     // Тест оператора +
