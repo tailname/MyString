@@ -122,6 +122,7 @@ MyString operator*(MyString is_string, unsigned int lenght) {
     }
     multiplication_char[is_string.length() * lenght] = '\0';
     MyString multiplication_string(multiplication_char);
+    delete[] multiplication_char;
     return multiplication_string;
 }
 MyString& MyString::operator=(const MyString& is_string) {
